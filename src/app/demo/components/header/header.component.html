@@ -1,0 +1,100 @@
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 me-5" href="#">
+                <img
+                    src="https://theme.hstatic.net/200000384421/1000955298/14/logo.png?v=23"
+                    alt=""
+                />
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            >Trang chủ</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Dropdown
+                        </a>
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="navbarDropdown"
+                        >
+                            <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                >
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+               
+                </ul>
+                <div class="d-flex">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Tìm kiếm sản phẩm"
+                        aria-label="Search"
+                        style="width: 250px;"
+                    />
+                    <button style="width: 80px;" class="btn btn-outline-success mr-4" type="submit">
+                        Tìm kiếm
+                    </button>
+                    <button *ngIf="!isLoggedIn" routerLink="/login" class="btn ms-5">
+                        <i style="font-size: 30px;" class="far fa-user"></i>
+                    </button>
+                    <div *ngIf="isLoggedIn" class="dropdown">
+                        <button class=" btn dropdown-toggle btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i style="font-size: 30px;" class="far fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a (click)="logout()" class="dropdown-item" >Logout</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </div>
+                    <button routerLink="cart" class="icon btn me-5">
+                        <i style="font-size: 30px" class="fas fa-cart-plus"></i>
+                        <div
+                            style="font-size: 10px"
+                            class="badge bg-danger"
+                        >5</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login.component';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
-import { HeaderComponent } from '../../header/header.component';
+import { SignupRoutingModule } from './signup-routing.module';
+import { SignupComponent } from './signup.component';
 
 @NgModule({
     imports: [
         CommonModule,
-        LoginRoutingModule,
+        SignupRoutingModule,
         ButtonModule,
         CheckboxModule,
         InputTextModule,
         FormsModule,
         PasswordModule,
         ReactiveFormsModule,
-        ToastModule,
+        ToastModule
     ],
-    declarations: [LoginComponent]
+    declarations: [SignupComponent]
 })
-export class LoginModule { }
+export class SignupModule { }

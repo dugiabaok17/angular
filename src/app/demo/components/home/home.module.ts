@@ -1,23 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LandingRoutingModule } from './landing-routing.module';
-import { LandingComponent } from './landing.component';
+import { HomeRoutingModule } from './home-routing.module'
+import { HomeComponent } from './home.component';
 import { StyleClassModule } from 'primeng/styleclass';
 import { DividerModule } from 'primeng/divider';
 import { ChartModule } from 'primeng/chart';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
-
+import { AvatarModule } from 'primeng/avatar';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 @NgModule({
     imports: [
         CommonModule,
-        LandingRoutingModule,
+        HomeRoutingModule,
         DividerModule,
         StyleClassModule,
         ChartModule,
         PanelModule,
-        ButtonModule
+        ButtonModule,
+        AvatarModule
     ],
-    declarations: [LandingComponent]
+    declarations: []
 })
-export class LandingModule { }
+export class HomeModule { }

@@ -1,3 +1,79 @@
-<p>home works!</p>
-<button type="button" (click)="handle()">Hello</button>
-<a href="http://localhost:4200/#/">check ne</a>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="banner">
+        <div
+            id="carouselExampleInterval"
+            class="carousel slide"
+            data-bs-ride="carousel"
+        >
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img
+                        style="max-height: 469px"
+                        src="https://theme.hstatic.net/200000384421/1000955298/14/home_slider_image_1.jpg?v=23"
+                        class="d-block w-100"
+                        alt="..."
+                    />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img
+                        style="max-height: 469px"
+                        src="https://theme.hstatic.net/200000384421/1000955298/14/home_slider_image_4.jpg?v=23"
+                        class="d-block w-100"
+                        alt="..."
+                    />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img
+                        style="max-height: 469px"
+                        src="https://theme.hstatic.net/200000384421/1000955298/14/home_slider_image_3.jpg?v=23"
+                        class="d-block w-100"
+                        alt="..."
+                    />
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="new-product row">
+            <h2>Sản phẩm mới</h2>
+            <div class="container">
+                <div class="row">
+                    <ng-container *ngFor="let item of productList">
+                        <div class="card col-3">
+                            <img src="{{item.image}}" alt="">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                            <p><strong>Price:</strong> ${{item.price}}</p>
+                            <button (click)="addToCart()" class="btn btn-primary" >Add to cart</button>
+                        </div>
+                    </ng-container>
+                </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
